@@ -1,0 +1,696 @@
+<?xml version="1.0" ?>
+<robot name="aidin8">
+  <joint name="aidin8__RFJ1" type="revolute">
+    <parent link="aidin8__body"/>
+    <child link="aidin8__RF_1"/>
+    <origin xyz="0.3224 -0.119   0" rpy="-1.57079  0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.6981317008" upper="0.6981317008" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RFJ2" type="revolute">
+    <parent link="aidin8__RF_1"/>
+    <child link="aidin8__RF_2"/>
+    <origin xyz="0.13769 0      0" rpy="-1.58259  1.57079 -1.58259"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RFJ_link1" type="revolute">
+    <parent link="aidin8__RF_1"/>
+    <child link="aidin8__RF_link1"/>
+    <origin xyz="0.13769 0      0" rpy="-1.57079  0.17453 -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RFJ3" type="revolute">
+    <parent link="aidin8__RF_2"/>
+    <child link="aidin8__RF_3"/>
+    <origin xyz="0.35 0   0" rpy="0      0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.047197551" upper="1.570796327" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RFJ_link2" type="revolute">
+    <parent link="aidin8__RF_link1"/>
+    <child link="aidin8__RF_link2"/>
+    <origin xyz="0.035 0    0" rpy="0      0      1.39626"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RFJ_link3" type="revolute">
+    <parent link="aidin8__RF_3"/>
+    <child link="aidin8__RF_link2"/>
+    <origin xyz="-0.03446 -0.00607  0" rpy="0       0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="0.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ1" type="revolute">
+    <parent link="aidin8__body"/>
+    <child link="aidin8__LF_1"/>
+    <origin xyz="0.3224 0.119  0" rpy="1.57079 0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.6981317008" upper="0.6981317008" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ2" type="revolute">
+    <parent link="aidin8__LF_1"/>
+    <child link="aidin8__LF_2"/>
+    <origin xyz="0.13769 0      0" rpy="-1.559    1.57079  1.58259"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ_link1" type="revolute">
+    <parent link="aidin8__LF_1"/>
+    <child link="aidin8__LF_link1"/>
+    <origin xyz="0.13769 0      0" rpy="-1.57079  0.17453  1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ3" type="revolute">
+    <parent link="aidin8__LF_2"/>
+    <child link="aidin8__LF_3"/>
+    <origin xyz="0.35 0   0" rpy="0      0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.047197551" upper="1.570796327" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ_link2" type="revolute">
+    <parent link="aidin8__LF_link1"/>
+    <child link="aidin8__LF_link2"/>
+    <origin xyz="0.035 0    0" rpy="0      0      1.39626"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LFJ_link3" type="revolute">
+    <parent link="aidin8__LF_3"/>
+    <child link="aidin8__LF_link2"/>
+    <origin xyz="-0.03446 -0.00607  0" rpy="0       0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="0.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ1" type="revolute">
+    <parent link="aidin8__body"/>
+    <child link="aidin8__LB_1"/>
+    <origin xyz="-0.3224  0.119   0" rpy="1.57079 0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.6981317008" upper="0.6981317008" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ2" type="revolute">
+    <parent link="aidin8__LB_1"/>
+    <child link="aidin8__LB_2"/>
+    <origin xyz="0.13769 0      0" rpy="-1.559    1.57079  1.58259"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ_link1" type="revolute">
+    <parent link="aidin8__LB_1"/>
+    <child link="aidin8__LB_link1"/>
+    <origin xyz="0.13769 0      0" rpy="-1.57079  0.17453  1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ3" type="revolute">
+    <parent link="aidin8__LB_2"/>
+    <child link="aidin8__LB_3"/>
+    <origin xyz="0.35 0   0" rpy="0      0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.047197551" upper="1.570796327" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ_link2" type="revolute">
+    <parent link="aidin8__LB_link1"/>
+    <child link="aidin8__LB_link2"/>
+    <origin xyz="0.035 0    0" rpy="0      0      1.39626"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__LBJ_link3" type="revolute">
+    <parent link="aidin8__LB_3"/>
+    <child link="aidin8__LB_link2"/>
+    <origin xyz="-0.03446 -0.00607  0" rpy="0       0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="0.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ1" type="revolute">
+    <parent link="aidin8__body"/>
+    <child link="aidin8__RB_1"/>
+    <origin xyz="-0.3224 -0.119   0" rpy="-1.57079  0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.6981317008" upper="0.6981317008" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ2" type="revolute">
+    <parent link="aidin8__RB_1"/>
+    <child link="aidin8__RB_2"/>
+    <origin xyz="0.13769 0      0" rpy="-1.58259  1.57079 -1.58259"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ_link1" type="revolute">
+    <parent link="aidin8__RB_1"/>
+    <child link="aidin8__RB_link1"/>
+    <origin xyz="0.13769 0      0" rpy="-1.57079  0.17453 -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ3" type="revolute">
+    <parent link="aidin8__RB_2"/>
+    <child link="aidin8__RB_3"/>
+    <origin xyz="0.35 0   0" rpy="0      0      1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.047197551" upper="1.570796327" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ_link2" type="revolute">
+    <parent link="aidin8__RB_link1"/>
+    <child link="aidin8__RB_link2"/>
+    <origin xyz="0.035 0    0" rpy="0      0      1.39626"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="10.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <joint name="aidin8__RBJ_link3" type="revolute">
+    <parent link="aidin8__RB_3"/>
+    <child link="aidin8__RB_link2"/>
+    <origin xyz="-0.03446 -0.00607  0" rpy="0       0      -1.57079"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-10.0" upper="0.0" effort="200.0" velocity="15.5"/>
+  </joint>
+  <link name="aidin8__body">
+    <inertial>
+      <mass value="12.3188555"/>
+      <origin xyz="0.00142 -0.00222 -0.04319" rpy="0 0 0"/>
+      <inertia ixx="0.1104557116459" ixy="0.0002742627834" ixz="-0.0007826805716" iyy="0.2925866863396" iyz="-0.0018014327089" izz="0.3259809298915"/>
+    </inertial>
+    <collision name="aidin8__body_1">
+      <origin xyz="0.4174 0     0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.026 0.318 0.207"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__body_2">
+      <origin xyz="-0.4174  0      0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.026 0.318 0.207"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__body_3">
+      <origin xyz="0    0.119 0.085" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0102" length="0.8848"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__body_4">
+      <origin xyz="0     0.119 -0.085" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0102" length="0.8848"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__body_5">
+      <origin xyz="0    -0.119  0.085" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0102" length="0.8848"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__body_6">
+      <origin xyz="0    -0.119 -0.085" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0102" length="0.8848"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__body_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Body_AIDIN8.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LF_1">
+    <inertial>
+      <mass value="6.3549628"/>
+      <origin xyz="0.00223 -0.00011 -0.03491" rpy="0 0 0"/>
+      <inertia ixx="0.0268822823205" ixy="0.0000315138420" ixz="-0.0010398645982" iyy="0.0388571979436" iyz="-0.0000013704590" izz="0.01899889911081"/>
+    </inertial>
+    <collision name="aidin8__LF_col1">
+      <origin xyz="0      0     -0.0507" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.2334"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF_col2">
+      <origin xyz="0.0083 0     0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.1984"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__LF_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Scapular_LF_stp_v2.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LF_2">
+    <inertial>
+      <mass value="0.8592967"/>
+      <origin xyz="1.7531e-01 -1.4970e-02 -1.2000e-04" rpy="0 0 0"/>
+      <inertia ixx="0.0007326198857" ixy="0.0000038940144" ixz="0.0000188178556" iyy="0.0157450190446" iyz="-0.0000015777889" izz="0.0157308802467"/>
+    </inertial>
+    <collision name="aidin8__LF2_col1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF2_col2">
+      <origin xyz="0.055 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF2_col3">
+      <origin xyz="0.175 -0.021  0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.18"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF2_col4">
+      <origin xyz="0.295 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF2_col5">
+      <origin xyz="0.35   0     0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LF2_col6">
+      <origin xyz="0.35    0     -0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__LF2_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Hip_left_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LF_3">
+    <inertial>
+      <mass value="0.6608339"/>
+      <origin xyz="0.12972 0.01155 0" rpy="0 0 0"/>
+      <inertia ixx="0.0004751764324" ixy="0.0012723021758" ixz="-0.0000000145887" iyy="0.0121223799746" iyz="-0.0000000021118" izz="0.0123849356151"/>
+    </inertial>
+    <collision name="aidin8__LF3_col6">
+      <origin xyz="0.4 0  0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.024"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__LF3_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Knee_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LF_link1">
+    <inertial>
+      <mass value="0.356529"/>
+      <origin xyz="0.00728 -0.00049  0.03154" rpy="0 0 0"/>
+      <inertia ixx="0.0009733125313" ixy="0.0000022519068" ixz="-0.0000814612402" iyy="0.0010405526310" iyz="0.0000057129200" izz="0.0001182849391"/>
+    </inertial>
+    <visual name="aidin8__LF_link1_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link1_left_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LF_link2">
+    <inertial>
+      <mass value="0.20931"/>
+      <origin xyz="0.175 0    0" rpy="0 0 0"/>
+      <inertia ixx="0.00000747991" ixy="0" ixz="0" iyy="0.00238918720" iyz="0" izz="0.00239407889"/>
+    </inertial>
+    <visual name="aidin8__LF_link2_vis1">
+      <origin xyz="-0.35  0    0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link2_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RF_1">
+    <inertial>
+      <mass value="6.3549628"/>
+      <origin xyz="2.22e-03 -7.00e-05 -3.49e-02" rpy="0 0 0"/>
+      <inertia ixx="0.0268838092963" ixy="-0.0000090031909" ixz="0.0010319405579" iyy="0.0388589753376" iyz="0.0000168509340" izz="0.0189992476926"/>
+    </inertial>
+    <collision name="aidin8__RF_col1">
+      <origin xyz="0      0     -0.0507" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.2334"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF_col2">
+      <origin xyz="0.0083 0     0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.1984"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RF_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Scapular_RF_stp_v2.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RF_2">
+    <inertial>
+      <mass value="0.8592967"/>
+      <origin xyz="1.7531e-01 -1.4970e-02  1.2000e-04" rpy="0 0 0"/>
+      <inertia ixx="0.0007326198866" ixy="0.0000038940144" ixz="-0.0000188175364" iyy="0.0157450190455" iyz="0.0000015777233" izz="0.0157308802469"/>
+    </inertial>
+    <collision name="aidin8__RF2_col1">
+      <origin xyz="0.175 0    0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.01" length="0.175"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF2_col2">
+      <origin xyz="0.055 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF2_col3">
+      <origin xyz="0.175 -0.021  0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.18"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF2_col4">
+      <origin xyz="0.295 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF2_col5">
+      <origin xyz="0.35   0     0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RF2_col6">
+      <origin xyz="0.35    0     -0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RF2_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Hip_right_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RF_3">
+    <inertial>
+      <mass value="0.6608339"/>
+      <origin xyz="0.12972 0.01155 0" rpy="0 0 0"/>
+      <inertia ixx="0.0004751764324" ixy="0.0012723021758" ixz="-0.0000000145887" iyy="0.0121223799746" iyz="-0.0000000021118" izz="0.0123849356151"/>
+    </inertial>
+    <collision name="aidin8__RF3_col6">
+      <origin xyz="0.4 0  0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.024"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RF3_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Knee_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RF_link1">
+    <inertial>
+      <mass value="0.356529"/>
+      <origin xyz="0.00726 -0.00049 -0.03152" rpy="0 0 0"/>
+      <inertia ixx="0.0009737671712" ixy="0.0000021895727" ixz="0.0000821138402" iyy="0.0010410742162" iyz="-0.0000057093198" izz="0.0001183464867"/>
+    </inertial>
+    <visual name="aidin8__RF_link1_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link1_right_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RF_link2">
+    <inertial>
+      <mass value="0.20931"/>
+      <origin xyz="0.175 0    0" rpy="0 0 0"/>
+      <inertia ixx="0.00000747991" ixy="0" ixz="0" iyy="0.00238918720" iyz="0" izz="0.00239407889"/>
+    </inertial>
+    <visual name="aidin8__RF_link2_vis1">
+      <origin xyz="-0.35  0    0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link2_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RB_1">
+    <inertial>
+      <mass value="6.3549628"/>
+      <origin xyz="0.00223 0.00011 0.03491" rpy="0 0 0"/>
+      <inertia ixx="0.0268822823505" ixy="-0.0000315138420" ixz="-0.0010398645982" iyy="0.0388571979436" iyz="-0.0000013704590" izz="0.0189988991081"/>
+    </inertial>
+    <collision name="aidin8__RB_col1">
+      <origin xyz="0     0     0.0507" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.2334"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB_col2">
+      <origin xyz="0.0083 0     0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.1984"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RB_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Scapular_RR_stp_v2.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RB_2">
+    <inertial>
+      <mass value="0.8592967"/>
+      <origin xyz="1.7531e-01 -1.4970e-02  1.2000e-04" rpy="0 0 0"/>
+      <inertia ixx="0.0007326198866" ixy="0.0000038940144" ixz="-0.0000188175364" iyy="0.0157450190455" iyz="0.0000015777233" izz="0.0157308802469"/>
+    </inertial>
+    <collision name="aidin8__RB2_col1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB2_col2">
+      <origin xyz="0.055 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB2_col3">
+      <origin xyz="0.175 -0.021  0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.18"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB2_col4">
+      <origin xyz="0.295 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB2_col5">
+      <origin xyz="0.35   0     0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__RB2_col6">
+      <origin xyz="0.35    0     -0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RB2_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Hip_right_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RB_3">
+    <inertial>
+      <mass value="0.6608339"/>
+      <origin xyz="0.12972 0.01155 0" rpy="0 0 0"/>
+      <inertia ixx="0.0004751764324" ixy="0.0012723021758" ixz="-0.0000000145887" iyy="0.0121223799746" iyz="-0.0000000021118" izz="0.0123849356151"/>
+    </inertial>
+    <collision name="aidin8__RB3_col6">
+      <origin xyz="0.4 0  0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.024"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__RB3_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Knee_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RB_link1">
+    <inertial>
+      <mass value="0.356529"/>
+      <origin xyz="0.00726 -0.00049 -0.03152" rpy="0 0 0"/>
+      <inertia ixx="0.0009737671712" ixy="0.0000021895727" ixz="0.0000821138402" iyy="0.0010410742162" iyz="-0.0000057093198" izz="0.0001183464867"/>
+    </inertial>
+    <visual name="aidin8__RB_link1_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link1_right_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__RB_link2">
+    <inertial>
+      <mass value="0.20931"/>
+      <origin xyz="0.175 0    0" rpy="0 0 0"/>
+      <inertia ixx="0.00000747991" ixy="0" ixz="0" iyy="0.00238918720" iyz="0" izz="0.00239407889"/>
+    </inertial>
+    <visual name="aidin8__RB_link2_vis1">
+      <origin xyz="-0.35  0    0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link2_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LB_1">
+    <inertial>
+      <mass value="6.3549628"/>
+      <origin xyz="2.22e-03 -7.00e-05  3.49e-02" rpy="0 0 0"/>
+      <inertia ixx="0.0268838092963" ixy="0.0000090031909" ixz="-0.0010319405579" iyy="0.0388589753376" iyz="0.0000168509340" izz="0.0189992476926"/>
+    </inertial>
+    <collision name="aidin8__LB_col1">
+      <origin xyz="0     0     0.0507" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.2334"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB_col2">
+      <origin xyz="0.0083 0     0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.0535" length="0.1984"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__LB_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Scapular_LR_stp_v2.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LB_2">
+    <inertial>
+      <mass value="0.8592967"/>
+      <origin xyz="1.7531e-01 -1.4970e-02 -1.2000e-04" rpy="0 0 0"/>
+      <inertia ixx="0.0007326198857" ixy="0.0000038940144" ixz="0.0000188178556" iyy="0.0157450190446" iyz="-0.0000015777889" izz="0.0157308802467"/>
+    </inertial>
+    <collision name="aidin8__LB2_col1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB2_col2">
+      <origin xyz="0.055 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB2_col3">
+      <origin xyz="0.175 -0.021  0" rpy="0      1.57079 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.18"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB2_col4">
+      <origin xyz="0.295 -0.021  0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.06 0.054"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB2_col5">
+      <origin xyz="0.35   0     0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <collision name="aidin8__LB2_col6">
+      <origin xyz="0.35    0     -0.0245" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.027" length="0.011"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__LB2_vis11">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Hip_left_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LB_3">
+    <inertial>
+      <mass value="0.6608339"/>
+      <origin xyz="0.12972 0.01155 0" rpy="0 0 0"/>
+      <inertia ixx="0.0004751764324" ixy="0.0012723021758" ixz="-0.0000000145887" iyy="0.0121223799746" iyz="-0.0000000021118" izz="0.0123849356151"/>
+    </inertial>
+    <collision name="aidin8__LB3_col6">
+      <origin xyz="0.4 0  0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.024"/>
+      </geometry>
+    </collision>
+    <visual name="aidin8__L9_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Leg_Knee_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LB_link1">
+    <inertial>
+      <mass value="0.356529"/>
+      <origin xyz="0.00728 -0.00049  0.03154" rpy="0 0 0"/>
+      <inertia ixx="0.0009733125313" ixy="0.0000022519068" ixz="-0.0000814612402" iyy="0.0010405526310" iyz="0.0000057129200" izz="0.0001182849391"/>
+    </inertial>
+    <visual name="aidin8__LB_link1_vis1">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link1_left_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="aidin8__LB_link2">
+    <inertial>
+      <mass value="0.20931"/>
+      <origin xyz="0.175 0    0" rpy="0 0 0"/>
+      <inertia ixx="0.00000747991" ixy="0" ixz="0" iyy="0.00238918720" iyz="0" izz="0.00239407889"/>
+    </inertial>
+    <visual name="aidin8__LB_link2_vis1">
+      <origin xyz="-0.35  0    0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/Knee_link2_stp.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

@@ -1,0 +1,1357 @@
+<?xml version="1.0" ?>
+
+<sdf version='1.6'>
+<model name='aidin8'>
+  <static>false</static>
+  <pose>0 0 1 0 0 0</pose>
+  <!-- <plugin name="clock" filename="libgz_clock.so">
+    <topic>/gazebo/frc/time</topic>
+  </plugin> -->
+
+  <link name='body'>
+    <pose>0 0 0 0 0 0</pose>
+    <gravity>1</gravity>
+    <inertial>
+      <mass>12.3188555</mass>
+      <pose>0.0014274 -0.0022232 -0.0431953 0 0 0</pose>
+      <inertia>
+        <ixx>0.1104557116459</ixx>
+        <ixy>0.0002742627834</ixy>
+        <ixz>-0.0007826805716</ixz>
+        <iyy>0.2925866863396</iyy>
+        <iyz>-0.0018014327089</iyz>
+        <izz>0.3259809298915</izz>
+      </inertia>
+    </inertial>
+    <self_collide>0</self_collide>
+    <must_be_base_link>1</must_be_base_link>
+    <velocity_decay>
+      <linear>0</linear>
+      <angular>0</angular>
+    </velocity_decay>
+
+    <visual name="body_visual">
+      <pose>0 0 0 0 0 0</pose>
+      <material>
+        <ambient>0.752941176470588 0.752941176470588 0.752941176470588 1</ambient>
+        <diffuse>0.752941176470588 0.752941176470588 0.752941176470588 1</diffuse>
+      </material>
+      <geometry>
+        <mesh>
+          <scale>1 1 1</scale>
+          <uri>../meshes/meshes_surface/Body_AIDIN8.STL</uri>
+        </mesh>
+      </geometry>
+      <material name="black"/>
+    </visual>
+
+    <collision name='body_1'>
+      <pose>0.4174 0 0 0 0 0</pose>
+      <geometry>
+        <box>
+            <size>0.026 0.318 0.207</size>
+        </box>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.003</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='body_2'>
+      <pose>-0.4174 0 0 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.026 0.318 0.207</size>
+        </box>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='body_3'>
+      <pose>0 0.119 0.085 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.8848</length>
+          <radius>0.0102</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='body_4'>
+      <pose>0 0.119 -0.085 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.8848</length>
+          <radius>0.0102</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='body_5'>
+      <pose>0 -0.119 0.085 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.8848</length>
+          <radius>0.0102</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='body_6'>
+      <pose>0 -0.119 -0.085 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.8848</length>
+          <radius>0.0102</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+  </link>
+
+  <link name='LF_1'> <!--front left shoulder -->
+    <pose>0.3224 0.119 0 1.57079632679 0 1.57079632679</pose>
+    <gravity>1</gravity>
+    <inertial>
+      <mass>6.3549628</mass>
+      <pose>0.0022379 -0.0001155 -0.0349126 0 0 0</pose>
+      <inertia>
+        <ixx>0.0268822823205</ixx>
+        <ixy>0.0000315138420</ixy>
+        <ixz>-0.0010398645982</ixz>
+        <iyy>0.0388571979436</iyy>
+        <iyz>-0.0000013704590</iyz>
+        <izz>0.01899889911081</izz>
+      </inertia>
+    </inertial>
+    <must_be_base_link>0</must_be_base_link>
+    <velocity_decay>
+      <linear>0</linear>
+      <angular>0</angular>
+    </velocity_decay>
+
+    <visual name="LF_vis11">
+      <pose>0 0 0 0 0 0</pose>
+      <material>
+        <ambient>0.752941176470588 0.752941176470588 0.752941176470588 1</ambient>
+        <diffuse>0.752941176470588 0.752941176470588 0.752941176470588 1</diffuse>
+      </material>
+      <geometry>
+        <mesh>
+          <scale>1 1 1</scale>
+          <uri>../meshes/meshes_surface/Leg_Scapular_LF_stp_v2.STL</uri>
+        </mesh>
+      </geometry>
+      <material name="black"/>
+    </visual>
+
+    <collision name='LF_col1'>
+      <pose>0 0 -0.0507 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.2334</length>
+          <radius>0.0535</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF_col2'>
+      <pose>0.0083 0 0 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.1984</length>
+          <!--length>0.19</length-->
+          <radius>0.0535</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>100.000000</mu>
+            <mu2>100.000000</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+  </link>
+
+  <link name='LF_2'> <!-- front left leg upper-->
+    <pose>0.3224 0.2567 0 1.57079632679 3.141592654 0</pose>
+    <gravity>1</gravity>
+    <inertial>
+      <mass>0.8592967</mass>
+      <pose>0.1753176 -0.0149727 -0.0001251 0 0 0</pose>
+      <inertia>
+        <ixx>0.0007326198857</ixx>
+        <ixy>0.0000038940144</ixy>
+        <ixz>0.0000188178556</ixz>
+        <iyy>0.0157450190446</iyy>
+        <iyz>-0.0000015777889</iyz>
+        <izz>0.0157308802467</izz>
+      </inertia>
+    </inertial>
+    <must_be_base_link>0</must_be_base_link>
+    <velocity_decay>
+      <linear>0</linear>
+      <angular>0</angular>
+    </velocity_decay>
+
+    <visual name="LF2_vis11">
+      <pose>0 0 0 0 0 0</pose>
+      <material>
+        <ambient>1 0 0 1</ambient>
+        <diffuse>1 0 0 1</diffuse>
+      </material>
+      <geometry>
+        <mesh>
+          <scale>1 1 1</scale>
+          <uri>../meshes/meshes_surface/Leg_Hip_left_stp.STL</uri>
+        </mesh>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+    <collision name='LF2_col1'>
+      <pose>0 0 0 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.054</length>
+          <radius>0.027</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF2_col2'>
+      <pose>0.055 -0.021 0 0 0 0</pose>
+      <geometry>
+        <box>
+            <size>0.06 0.06 0.054</size>
+        </box>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF2_col3'>
+      <pose>0.175 -0.021 0 0 1.57079632679 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.18</length>
+          <radius>0.025</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF2_col4'>
+        <pose>0.295 -0.021 0 0 0 0</pose>
+      <geometry>
+        <box>
+            <size>0.06 0.06 0.054</size>
+        </box>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF2_col5'>
+      <pose>0.35 0 0.0245 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.011 </length>
+          <radius>0.027</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <collision name='LF2_col6'>
+      <pose>0.35 0 -0.0245 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <length>0.011 </length>
+          <radius>0.027</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+    </collision>
+
+    <!-- <collision name='LF2_col8'>
+
+      <pose>-0.0175 0 -0.35 1.57079632679 1.57079632679 1.57079632679</pose>
+      <geometry>
+        <cylinder>
+          <length>0.01</length>
+          <radius>0.0225</radius>
+        </cylinder>
+      </geometry>
+      <surface>
+          <friction>
+            <ode>
+              <mu>100.000000</mu>
+              <mu2>100.000000</mu2>
+            </ode>
+          </friction>
+        </surface>
+    </collision> -->
+
+  </link>
+
+  <link name='LF_3'> <!-- front left lower leg -->
+    <pose>-0.0276 0.2567 0 1.57079632679 1.57079632679 0</pose>
+    <gravity>1</gravity>
+    <inertial>
+      <mass>0.6608339</mass>
+      <pose>0.1297263 0.0115505 -0.0000002 0 0 0</pose>
+      <inertia>
+        <ixx>0.0004751764324</ixx>
+        <ixy>0.0012723021758</ixy>
+        <ixz>-0.0000000145887</ixz>
+        <iyy>0.0121223799746</iyy>
+        <iyz>-0.0000000021118</iyz>
+        <izz>0.0123849356151</izz>
+      </inertia>
+    </inertial>
+    <must_be_base_link>0</must_be_base_link>
+    <velocity_decay>
+      <linear>0</linear>
+      <angular>0</angular>
+    </velocity_decay>
+
+    <visual name="LF3_vis11">
+      <pose>0 0 0 0 0 0</pose>
+      <material>
+        <ambient>0.196078431372549 0.196078431372549 0.196078431372549 1</ambient>
+        <diffuse>0.196078431372549 0.196078431372549 0.196078431372549 1</diffuse>
+      </material>
+      <geometry>
+        <mesh>
+          <scale>1 1 1</scale>
+          <uri>../meshes/meshes_surface/Leg_Knee_stp.STL</uri>
+        </mesh>
+      </geometry>
+    </visual>
+
+      <!-- <collision name='LF3_col1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.03</length>
+            <radius>0.02</radius>
+          </cylinder>
+        </geometry>
+	      <surface>
+          <friction>
+            <ode>
+              <mu>100.000000</mu>
+              <mu2>100.000000</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision> -->
+
+      <!-- <collision name='LF3_col2'>
+        <pose>0.0152 -0.0025 0 0 0 0</pose>
+        <geometry>
+    	    <box>
+              <size>0.03 0.045 0.036</size>
+          </box>
+        </geometry>
+	      <surface>
+          <friction>
+            <ode>
+              <mu>100.000000</mu>
+              <mu2>100.000000</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision> -->
+
+      <!-- <collision name='LF3_col3'>
+        <pose>0.1007581 0.0255584 0 0 0 0.41887902048</pose>
+        <geometry>
+    	  <box>
+              <size>0.17 0.035 0.036</size>
+          </box>
+        </geometry>
+	      <surface>
+            <friction>
+              <ode>
+                <mu>100.000000</mu>
+                <mu2>100.000000</mu2>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+
+      <collision name='LF3_col4'>
+        <pose>0.2109143 0.0609071 0 0 0 0.05925392811</pose>
+        <geometry>
+    	  <box>
+              <size>0.0771692 0.035 0.036</size>
+          </box>
+        </geometry>
+	      <surface>
+            <friction>
+              <ode>
+                <mu>100.000000</mu>
+                <mu2>100.000000</mu2>
+              </ode>
+            </friction>
+          </surface>
+      </collision>
+            
+      <collision name='LF3_col5'>
+        <pose>0.3223493 0.0351797 0 0 0 -0.34906585040</pose>
+        <geometry>
+    	  <box>
+              <size>0.17 0.035 0.036</size>
+          </box>
+        </geometry>
+	      <surface>
+            <friction>
+              <ode>
+                <mu>100.000000</mu>
+                <mu2>100.000000</mu2>
+              </ode>
+            </friction>
+          </surface>
+      </collision> -->
+
+      <!--front left foot sphere-->
+      <collision name='LF3_col6'> 
+      <max_contacts>100</max_contacts>
+        <pose>0.4 0 0 0 0 0</pose>
+        <geometry>
+    	  <sphere>
+              <radius>0.024</radius>
+          </sphere>
+        </geometry>
+	      <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.005</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+6</kp>
+              <kd>1e-1</kd>
+            </bullet>
+          </contact>
+          <soft_contact>
+            <dart>
+              <bone_attachment>10</bone_attachment>
+              <stiffness>10</stiffness>
+              <damping>1</damping>
+            </dart>
+          </soft_contact>
+          <friction>
+            <ode>
+              <mu>1e+100</mu>
+              <mu2>1e+100</mu2>
+              <fdir1>0 0 1</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+        </surface>
+      </collision>
+
+      <!--front left foot cylinder-->
+      <!-- <collision name='LF3_col7'>
+      <max_contacts>100</max_contacts>
+        <pose>0.4 0 0 0 0 0</pose>
+        <geometry>
+        <cylinder>
+            <length>0.036</length>
+            <radius>0.024</radius>
+          </cylinder>
+        </geometry>
+	      <surface>
+            <friction>
+              <ode>
+                <mu>1000.000000</mu>
+                <mu2>1000.000000</mu2>
+              </ode>
+            </friction>
+          </surface>
+      </collision> -->
+
+    <sensor name="LF_3_sensor" type="contact">
+      <plugin name="LF_plugin" filename="libcontact.so"/>
+      <always_on>true</always_on>
+      <update_rate>250</update_rate>
+      <contact>
+        <collision>LF3_col6</collision>
+      </contact>
+    </sensor>
+</link>
+
+<link name='LF_link1'>
+      <pose>+0.3224 +0.2567 0 1.57079632679 -1.745329252 0</pose> <!-- 10도 -->
+      <gravity>1</gravity>
+      <inertial>
+        <mass>0.356529</mass>
+        <pose>0.0072807 -0.0004972 0.0315437 0 0 0</pose>
+        <inertia>
+          <ixx>0.0009733125313</ixx>
+          <ixy>0.0000022519068</ixy>
+          <ixz>-0.0000814612402</ixz>
+          <iyy>0.0010405526310</iyy>
+          <iyz>0.0000057129200</iyz>
+          <izz>0.0001182849391</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="LF_link1_vis1">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.196078431372549 0.196078431372549 0.196078431372549 1</ambient>
+          <diffuse>0.196078431372549 0.196078431372549 0.196078431372549 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../meshes/meshes_surface/Knee_link1_left_stp.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+</link>
+
+<link name='LF_link2'>
+      <pose>+0.3163223138 +0.2567 +0.0344683 1.57079632679 3.141592654 0</pose>
+      <gravity>1</gravity>
+      <inertial>
+        <mass>0.20931</mass>
+        <pose>0.175 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00000747991</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00238918720</iyy>
+          <iyz>0</iyz>
+          <izz>0.00239407889</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="LF_link2_vis1">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.752941176470588 0.752941176470588 0.752941176470588 1</ambient>
+          <diffuse>0.752941176470588 0.752941176470588 0.752941176470588 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../meshes/meshes_surface/Knee_link2_stp.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+</link>
+
+
+<!--////////////////////////////////////////////// LF joint //////////////////////////////////////////////////-->
+
+<joint name='LFJ1' type='revolute'>
+  <child>LF_1</child>
+  <parent>body</parent>
+  <pose>0 0 0 0 0 0</pose>
+  <axis>
+    <xyz>0 0 1</xyz>
+    <limit>
+      <lower>-0.6981317008</lower>
+      <upper>0.6981317008</upper>
+      <velocity>15.5</velocity>
+      <effort>200</effort>
+    </limit>
+    <dynamics>
+      <damping>1</damping>
+      <friction>5</friction>
+    </dynamics>
+  </axis>
+	<sensor name="LFJ1_sensor" type="force_torque">
+          <update_rate>1000</update_rate>
+        </sensor>
+</joint>
+
+<joint name='LFJ2' type='revolute'>
+  <child>LF_2</child>
+  <parent>LF_1</parent>
+  <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-10</lower>
+          <upper>10</upper>
+          <velocity>15.5</velocity>
+          <effort>200</effort>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>5</friction>
+        </dynamics>
+      </axis>
+	<sensor name="LFJ2_sensor" type="force_torque">
+          <update_rate>1000</update_rate>
+        </sensor>
+</joint>
+
+<joint name='LFJ_link1' type='revolute'>
+  <child>LF_link1</child>
+  <parent>LF_1</parent>
+  <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-10</lower>
+          <upper>10</upper>
+          <velocity>15.5</velocity>
+          <effort>200</effort>
+        </limit>
+        <!-- <dynamics>
+          <damping>1</damping>
+          <friction>5</friction>
+        </dynamics> -->
+      </axis>
+</joint>
+
+<joint name='LFJ3' type='revolute'>
+  <child>LF_3</child>
+  <parent>LF_2</parent>
+  <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.047197551</lower>
+          <upper>1.570796327</upper>
+          <velocity>15.5</velocity>
+          <effort>200</effort>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>5</friction>
+        </dynamics>
+      </axis>
+      <sensor name="LFJ3_sensor" type="force_torque">
+          <update_rate>1000</update_rate>
+        </sensor>
+</joint>
+
+<joint name='LFJ_link2' type='revolute'>
+  <child>LF_link2</child>
+  <parent>LF_link1</parent>
+  <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-10</lower>
+          <upper>10</upper>
+          <velocity>15.5</velocity>
+          <effort>200</effort>
+        </limit>
+        <!-- <dynamics>
+          <damping>1</damping>
+          <friction>5</friction>
+        </dynamics> -->
+      </axis>
+</joint>
+
+
+<plugin name="ROSaidin8Plugin_multi" filename="libsub_aidin8_multi.so">
+ <!-- <Namespace>aidinvi</Namespace> -->
+</plugin>
+
+</model>
+</sdf>
+<!--camera1 <pose> 0.0  0.535 -0.013        0           0.5235987756  1.570796327 </pose> 
+    camera2 <pose> 0.0 -0.090 -0.107046994 -1.570796327 1.570796327   0           </pose>
+    camera3 <pose> 0.0 -0.535 -0.013        0           0.5235987756 -1.570796327 </pose> 
+    camera5 <pose> 0.0  0.535 -0.013        0           1.0471975512  1.570796327 </pose>  -->

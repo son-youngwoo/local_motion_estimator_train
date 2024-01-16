@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot name="rectangular_model">
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+  </material>
+  
+  <link name="base1"/>
+
+  <joint name="joint1" type="prismatic">
+    <parent link="base1"/>
+    <child link="base2"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <!-- <limit effort="1000.0" lower="-4" upper="4" velocity="100"/> -->
+    <limit velocity="5"/>
+  </joint>
+
+  <link name="base2"/>
+
+   <joint name="joint2" type="revolute">
+    <parent link="base2"/>
+    <child link="footprint"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit lower="-3.14" upper="3.14" velocity="0.05"/>
+  </joint>
+
+  <link name="footprint">
+    <inertial>
+      <mass value="12.3188555"/>
+      <origin xyz="0.00142 -0.00222 -0.04319" rpy="0 0 0"/>
+      <inertia ixx="0.1104557116459" ixy="0.0002742627834" ixz="-0.0007826805716" iyy="0.2925866863396" iyz="-0.0018014327089" izz="0.3259809298915"/>
+    </inertial>
+    <collision name="footprint_col">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="1.2 0.6 0.215"/>
+      </geometry>
+    </collision>
+    <visual name="footprint_vis">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="1.2 0.6 0.215"/>
+      </geometry>
+    </visual>
+    <!-- <collision name="body_col">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.97714 0.324 0.215"/>
+      </geometry>
+    </collision>
+    <visual name="body_vis">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.97714 0.324 0.215"/>
+      </geometry>
+    </visual> -->
+  </link>
+<!-- 
+   <joint name="joint3" type="fixed">
+    <parent link="footprint"/>
+    <child link="head"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="head">
+    <visual name="head_vis">
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+  </link> -->
+
+  
+</robot>
+

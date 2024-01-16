@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot name="rectangular_model">
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+  </material>
+  
+  <link name="base1"/>
+
+  <joint name="joint1" type="prismatic">
+    <parent link="base1"/>
+    <child link="footprint1"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <!-- <limit effort="1000.0" lower="-4" upper="4" velocity="100"/> -->
+    <limit velocity="5"/>
+  </joint>
+
+  <link name="footprint1">
+    <inertial>
+      <mass value="12.3188555"/>
+      <origin xyz="0.00142 -0.00222 -0.04319" rpy="0 0 0"/>
+      <inertia ixx="0.1104557116459" ixy="0.0002742627834" ixz="-0.0007826805716" iyy="0.2925866863396" iyz="-0.0018014327089" izz="0.3259809298915"/>
+    </inertial>
+    <collision name="footprint1_col">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.98 0.6 0.215"/>
+      </geometry>
+    </collision>
+    <visual name="footprint1_vis">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.98 0.6 0.215"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="joint2" type="fixed">
+    <parent link="footprint1"/>
+    <child link="footprint2"/>
+    <origin xyz="-0.53 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="footprint2">
+    <inertial>
+      <mass value="12.3188555"/>
+      <origin xyz="0.00142 -0.00222 -0.04319" rpy="0 0 0"/>
+      <inertia ixx="0.1104557116459" ixy="0.0002742627834" ixz="-0.0007826805716" iyy="0.2925866863396" iyz="-0.0018014327089" izz="0.3259809298915"/>
+    </inertial>
+    <collision name="footprint2_col">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.08 0.6 0.215"/>
+      </geometry>
+    </collision>
+    <visual name="footprint2_vis">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.08 0.6 0.215"/>
+      </geometry>
+    </visual>
+  </link>
+
+<!-- 
+   <joint name="joint3" type="fixed">
+    <parent link="footprint"/>
+    <child link="head"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="head">
+    <visual name="head_vis">
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+  </link> -->
+
+  
+</robot>
+
